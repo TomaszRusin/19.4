@@ -4,9 +4,7 @@ const first = 'Hello';
 
 const second = 'World';
 
-{
-    console.log(`${first}${second}`)
-}
+console.log(`${first}${second}`)
 
 // ZADANIE DRUGIE
 
@@ -15,9 +13,9 @@ const multiply = (a = 1, b = 1) => console.log(a * b);
 // ZADANIE TRZECIE
 
 const average = (...args) => {
-    let sum = 0;
-    args.forEach(arg => sum += arg)
-    return console.log(sum/args.length);
+    let sum = args.reduce((a, b) => a + b)
+    let avr = sum/args.length
+    return avr;
 };
 
 // ZADANIE CZWARTE
